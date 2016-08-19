@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'mysql',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,19 +52,34 @@ return [
             'prefix' => '',
         ],
 
+
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('tech-council', 'forge'),
-            'username' => env('root', 'forge'),
-            'password' => env('chroot', ''),
+            'host' => 'localhost',
+            'database' => 'tech-council',
+            'username' => 'root',
+            'password' => 'chroot',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => false,
             'engine' => null,
         ],
+
+
+        // 'mysql' => [
+        //     'driver' => 'mysql',
+        //     'host' => env('DB_HOST', 'localhost'),
+        //     'port' => env('DB_PORT', '3306'),
+        //     'database' => env('tech-council', 'forge'),
+        //     'username' => env('root', 'forge'),
+        //     'password' => env('chroot', ''),
+        //     'charset' => 'utf8',
+        //     'collation' => 'utf8_unicode_ci',
+        //     'prefix' => '',
+        //     'strict' => false,
+        //     'engine' => null,
+        // ],
 
         'pgsql' => [
             'driver' => 'pgsql',
