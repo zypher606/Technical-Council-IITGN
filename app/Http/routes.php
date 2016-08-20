@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 
 // Route::get('/', [
@@ -24,7 +22,7 @@ Route::get('/', function () {
 
 Route::auth();
 
-// Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 
 
@@ -41,3 +39,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::controllers([
    'password' => 'Auth\PasswordController',
 ]);
+
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::controller('/', 'Auth\AuthController');

@@ -12,9 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
+    // use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -24,6 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // if (Auth::check()) {
+        //   return view('dashboard');
+        // }
+        // else {
+        //   return view('home');
+        // }
     }
+
+
 }

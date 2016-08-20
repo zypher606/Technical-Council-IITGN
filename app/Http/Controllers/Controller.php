@@ -11,4 +11,18 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+
+
+    public function home() {
+
+    }
+
+
+    public function dashboard() {
+        if (view()->exists('auth.authenticate')) {
+            return view('auth.authenticate');
+        }
+
+        return view('auth.login');
+    }
 }
